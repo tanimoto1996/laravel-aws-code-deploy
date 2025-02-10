@@ -2,7 +2,7 @@
 
 cd /var/www/html/laravel
 
-# パーミッション調整
+# パーミッション調整テスト
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
