@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install dependencies via Composer..."
+      - curl -sS https://getcomposer.org/installer | php
+      - php composer.phar install --no-dev --optimize-autoloader
+  build:
+    commands:
+      - echo "Optional: php artisan config:cache, etc."
+      - php artisan config:cache
+  post_build:
+    commands:
+      - echo "Build stage completed"
+
+artifacts:
+  files:
+    - '**/*'
+  exclude-paths:
+    - '.git/**'
+    - 'node_modules/**'
