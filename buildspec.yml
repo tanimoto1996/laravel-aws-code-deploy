@@ -10,7 +10,6 @@ phases:
   build:
     commands:
       - echo "Build step here (e.g., php artisan config:cache)"
-      - php artisan config:cache
 
   post_build:
     commands:
