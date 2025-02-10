@@ -3,7 +3,7 @@
 cd /var/www/html/laravel
 
 # --- (1) パーミッション調整 ---
-# ※例: Nginx/PHP-FPMユーザーがwww-dataの場合
+# ※例: Nginx/PHP-FPMユーザーがwww-dataの場合（PHP-FPMのデフォルトユーザーがwww-dataのため）
 chown -R www-data:www-data storage bootstrap/cache
 chmod -R 775 storage bootstrap/cache
 
